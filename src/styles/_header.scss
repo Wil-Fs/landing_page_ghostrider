@@ -1,0 +1,16 @@
+@use 'variaveis';
+
+.header {
+    position: sticky;
+    right: 0;
+    z-index: 1;
+    //background-color: variaveis.$headerBgColor;
+    &__content {
+        display: flex;
+        padding: 18px;
+        img {
+            height: 37px;
+            margin: 20px;
+        }
+    }
+}

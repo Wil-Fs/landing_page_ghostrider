@@ -1,0 +1,30 @@
+.hero {
+    padding: 4vw;
+    margin-top: -10vw;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/background_image.jpg);
+    
+    &__content {
+        height: 600px;
+        position: relative;
+        &__title {   
+            position: absolute;
+            right: 0;
+            bottom: 0;   
+        }
+
+        &__items {
+            position: absolute;
+            right: 0;
+            
+            video {
+               display: flex;
+               flex-direction: column;
+               margin-bottom: 12px;
+               width: 260px
+            }
+        }
+    }
+}

@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Williamfs133/landing_page_ghostrider#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
     "sass": "^1.57.1"
   }
