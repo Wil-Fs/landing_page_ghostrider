@@ -1,0 +1,30 @@
+@use 'variaveis';
+
+.synopsis {
+    padding: 4vw;
+    background-color: variaveis.$bgColor2;
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        &__img {
+            img {
+                margin-top: 64px;
+                height: 600px;
+            }
+        }
+
+        &__text {
+            
+            h2 {
+                text-align: center;
+                margin-bottom: 24px;
+            }
+
+            p {
+                margin-left: 100px;
+                width: 440px;
+            }
+        }
+    }
+}

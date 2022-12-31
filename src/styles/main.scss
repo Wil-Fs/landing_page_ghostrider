@@ -1,17 +1,16 @@
 @use 'hero';
 @use 'header';
 @use 'variaveis';
-
-/*
-font-family: 'Cinzel', serif;
-font-family: 'Cinzel Decorative', cursive;
-*/
+@use 'synopsis';
+@use 'ghost';
 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 body {
@@ -20,27 +19,53 @@ body {
     overflow-x: hidden;
 }
 
-
 @mixin mix($fontSize: 28px) {
     font-family: 'Cinzel Decorative', cursive;
     font-size: $fontSize;
-    background: -webkit-linear-gradient(variaveis.$colorMix1, variaveis.$colorMix2, variaveis.$colorMix3);
+    background: -webkit-linear-gradient(variaveis.$colorMix1, variaveis.$colorMix2, variaveis.$colorMix3, variaveis.$colorMix4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.text--small {
-    font-size: 10px;
+@mixin text($fontSize) {
+    font-size: $fontSize;
     font-family: 'Cinzel Decorative', cursive;
     color: #8f8677;
     font-weight: 600;
 }
 
+.text--small {
+   @include text(10px)
+}
+
+.text {
+    @include text(12px)
+}
+
+.text--big {
+    @include text(20px)
+}
+
+.title--small {
+   @include text(10px)
+}
+
+.title {
+    @include text(12px)
+}
+
+.title--big {
+    @include text(30px)
+}
+
 .text--mix {
+    @include mix(16)
+}
+
+.text--mix--big {
     @include mix;
 }
 
-
 .title--mix {
-   @include mix(48px);
+   @include mix(56px);
 }
