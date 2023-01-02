@@ -9,8 +9,13 @@
         display: flex;
         padding: 18px;
         .logo {
-            height: 28px;
-            margin: 6px;
+            height: 50px;
+            margin: 10px;
+
+            @media (max-width: 768px) {
+                height: 28px;
+                margin: 6px;
+            }
         }
     }
 }
