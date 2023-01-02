@@ -2,7 +2,8 @@
 
 .ghost {
     max-width: 100vw;
-
+    background-color: variaveis.$bgColor2;
+    margin-bottom: 20px;
     &__content {
         position: relative;
 
@@ -14,6 +15,15 @@
             top: 30%;
             left: 7%;
             position: absolute;
+
+            @media (max-width: 768px) {
+                margin-top: 10px;
+                position: inherit;
+
+                h3 {
+                    font-size: 28px;
+                }
+            }
         }
 
         &__buttons {
@@ -24,6 +34,13 @@
             grid-template-columns: 1fr 1fr;
             gap: 10px;
 
+
+            @media (max-width: 768px) {
+                position: inherit;
+                left: 0;
+            }
+
+
             &__button {
                 padding: 20px 30px;
                 margin-top: 20px;
@@ -32,6 +49,18 @@
                 text-align: center;
                 cursor: pointer;
                 transition: 0.25s;
+
+                @media (max-width: 768px) {
+                    padding: 10px 16px;
+                    margin-top: 0;
+
+                    border-top: 3px solid variaveis.$bgColor;
+                    border-bottom: 3px solid variaveis.$bgColor;
+
+                    a {
+                        font-size: 16px;
+                    }
+                }
 
                 &:hover {
                     background-color: variaveis.$bgColor2;

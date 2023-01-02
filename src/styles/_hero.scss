@@ -1,3 +1,5 @@
+@use 'variaveis';
+
 .hero {
     padding: 4vw;
     margin-top: -10vw;
@@ -5,25 +7,65 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../images/background_image.jpg);
-    
+
+    @media (max-width: 768px) {
+        padding: 0;
+        margin-top: -20vw;
+        background-size: contain;
+        height: 200px;
+        min-height: 270px;
+        background-color: variaveis.$bgColor2;
+    }
+
     &__content {
         height: 600px;
         position: relative;
-        &__title {   
+
+        @media (max-width: 768px) {
+            height: 272px;
+        }
+
+        &__title {
             position: absolute;
             right: 0;
-            bottom: 0;   
+            bottom: 0;
+
+            @media (max-width: 768px) {
+                top: 50%;
+                right: 2%;
+
+                h1 {
+                    font-size: 20px;
+                }
+    
+                p {
+                    font-size: 16px;
+                }
+            }
         }
 
         &__items {
             position: absolute;
             right: 0;
-            
+
+            @media (max-width: 768px) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 4px;
+                bottom: 0;
+            }
+
             video {
-               display: flex;
-               flex-direction: column;
-               margin-bottom: 12px;
-               width: 260px
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 12px;
+                width: 260px;
+
+                @media (max-width: 768px) {
+                    width: 126px;
+                    margin-bottom: 0;
+                }
+
             }
         }
     }

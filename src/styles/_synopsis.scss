@@ -7,10 +7,21 @@
     &__content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        
+        @media (max-width: 768px) {
+            display: block;
+        }
+        
         &__img {
+
             img {
                 margin-top: 64px;
                 height: 600px;
+
+                @media (max-width: 768px) {
+                    margin-top: 0;
+                    height: 260px;
+                }
             }
         }
 
@@ -24,6 +35,17 @@
             p {
                 margin-left: 100px;
                 width: 440px;
+            }
+
+            @media (max-width: 768px) {
+                h2 {
+                    font-size: 20px;
+                }
+
+                p {
+                    width: 360px;
+                    margin-left: 0;
+                }
             }
         }
     }
