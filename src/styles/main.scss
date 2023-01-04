@@ -11,12 +11,12 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    overflow-x: hidden;
 }
 
 body {
     background-color: variaveis.$bgColor2;
     font-family: Ghost, sans-serif;
-    overflow-x: hidden;
 }
 
 @mixin mix($fontSize: 28px) {
